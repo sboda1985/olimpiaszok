@@ -1,3 +1,20 @@
+/*
+Olvassunk be egy k kétjegyű számot, majd generáljunk le egy sorozatot a következőképpen:
+a sorozat elemei az előző szám négyzetéből alkotott kétjegyű/egyjegyű szám lesz, úgy, 
+hogy csak a százasok s a tizesek helyén levő számjegyekből alkotjuk az új tagot.
+A sorozatnak akkor lesz vége, ha eljutunk a 0 tagig, vagy ha ismétlődik valamelyik tag.
+
+Ezután rendezzük a kapott sorozatot növekvő sorrendbe az első számjegy alapján!
+
+pl 
+16 ra
+25 62 84 5 2 0
+0 25 2 5 62 84
+
+
+
+*/
+
 #include <iostream>
 
 using namespace std;
