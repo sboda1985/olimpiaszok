@@ -1,3 +1,15 @@
+/*
+
+Adott egy input.txt, amelynek az első sorában egy N szám van, 
+s a következő 2 sorban egy a, illetve b sorozat.
+Számítsuk ki az ai^bi összeg utolsó számjegyét, s írjuk ki egy output.txt fileba.
+
+Trükk: az összeg utolsó számjegyéhez minden tag utolsó számjegyére van szükségünk, 
+így minden szorzás után elhanyagoljuk a többit.
+Lehetne még hatékonyabban is, ha figyelembe vennék, hogy különböző számjegyek 
+különböző hatványokon csak néhány értéket vehetnek fel, pl 5 bármelyik 0 tól nagyobb hatványkitevő esetén 5 el végződik, stb.
+*/
+
 #include <iostream>
 #include <fstream>
 using namespace std;
