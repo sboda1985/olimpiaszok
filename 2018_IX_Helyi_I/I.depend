@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1517593471 source:/home/sboda/Dropbox/info_matekfizika/versenyek/2018_Olimpiasz_IX/megoldas/I/main.cpp
+	<iostream>
+	<fstream>
+
