@@ -9,27 +9,45 @@ int main()
     cout << "Kerem a szamot";
     cin >> szam;
     int a = szam;
-    int p = 1, n=0;
+    int p = 1, n=0, S=0;
     while (a>0)
     {
+        S = S + a%10;
         p = p * 10;
         a = a/10;
         n++;
     }
+
     p = p/10;
-    cout << n << " " << p << endl;
+    a = szam;
     int    maxmax = szam;
+
     for(int i =0; i<n; i++)
     {
         int c = szam%10;
         szam = szam / 10;
         szam = c*p + szam;
-        cout << szam << endl;
-        if (szam > maxmax)
+        if (szam > a)
         {
-            maxmax = szam;
+            if (maxmax == a)
+            {
+                maxmax = szam;
+            }
+            if (maxmax > szam)
+            {
+                maxmax = szam;
+            }
         }
+
     }
-    cout << maxmax << endl;
+    if (maxmax == a)
+    {
+        cout << a + S;
+    }
+    else
+    {
+        cout << maxmax;
+    }
     return 0;
+
 }
