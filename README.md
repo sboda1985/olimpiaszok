@@ -6,4 +6,4 @@ Itt a különböző olimpiászokra megoldott feladatok lesznek, a következő el
 * osztály
 * szakasz
 
-A feladatok elejére, kommentként többnyire ott lesz a feladat szövege is, 
+A feladatok elején, kommentként többnyire ott lesz a feladat szövege is, 
