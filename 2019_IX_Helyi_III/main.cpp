@@ -1,7 +1,11 @@
 #include <iostream>
 
 using namespace std;
-
+/*
+N szamot olvasunk be a billentyuzetrol, 
+s ket * valamint N-3 + muveletet kell kozzejuk elhelyezni,
+ugy, hogy a kapott kifejezes erteke maximalis legyen
+*/
 int main()
 {
 
