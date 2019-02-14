@@ -5,48 +5,50 @@ using namespace std;
 int main()
 {
 
-    int szam;
+    int szam, v[20];
     cout << "Kerem a szamot";
     cin >> szam;
     int a = szam;
-    int p = 1, n=0, S=0;
+    int n=0, S=a, pos = -1;
     while (a>0)
     {
         S = S + a%10;
-        p = p * 10;
+        v[n] = a%10;
+        if (n>0)
+        {
+            if((v[n] < v[n-1]) && (pos==-1))
+            {
+                int csere = v[n];
+                v[n] = v[n-1];
+                v[n-1] = csere;
+                pos =n-1;
+            }
+        }
         a = a/10;
         n++;
     }
-
-    p = p/10;
-    a = szam;
-    int    maxmax = szam;
-
-    for(int i =0; i<n; i++)
+    for(int i=0; i<pos-1; i++)
     {
-        int c = szam%10;
-        szam = szam / 10;
-        szam = c*p + szam;
-        if (szam > a)
+        for(int j=i+1; j<pos; j++)
         {
-            if (maxmax == a)
+            if (v[i] < v[j])
             {
-                maxmax = szam;
-            }
-            if (maxmax > szam)
-            {
-                maxmax = szam;
+                int csere = v[i];
+                v[i] = v[j];
+                v[j] = csere;
             }
         }
-
     }
-    if (maxmax == a)
+    if (pos == -1)
     {
-        cout << a + S;
+        cout << S;
     }
     else
     {
-        cout << maxmax;
+        for(int i=n-1; i>=0; i--)
+        {
+            cout << v[i];
+        }
     }
     return 0;
 
